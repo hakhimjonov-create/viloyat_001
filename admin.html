@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Unbounded:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Tadbirkor kabineti</title>
+</head>
+
+<body>
+    <main class="page">
+        <div class="page-head">
+            <h1>Kelgan takliflar</h1>
+            <p>Yosh mutaxassislar yuborgan takliflarni ko‘ring, holatini belgilang va ular bilan bog‘laning.</p>
+        </div>
+        <div id="stats" class="stats"></div>
+        <div class="cols wide">
+            <section>
+                <div class="toolbar">
+                    <input id="search" type="search" placeholder="Ism, sarlavha yoki matn bo‘yicha qidirish"
+                        aria-label="Qidirish">
+                    <select id="fDirection" aria-label="Yo‘nalish bo‘yicha"></select>
+                    <select id="fStatus" aria-label="Holat bo‘yicha"></select>
+                </div>
+                <ul id="list" class="list"></ul>
+                <p id="empty" class="empty" hidden></p>
+            </section>
+            <aside class="sticky">
+                <div class="bars">
+                    <h2>Yo‘nalishlar bo‘yicha</h2>
+                    <div id="bars" class="bars-list" style="display:grid;gap:12px"></div>
+                    <button id="exportBtn" class="btn ghost small" type="button">CSV yuklab olish</button>
+                </div>
+            </aside>
+        </div>
+    </main>
+    <script src="auth.js"></script>
+    <script src="admin.js"></script>
+</body>
+
+</html>

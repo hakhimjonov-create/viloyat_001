@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Unbounded:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Kirish</title>
+</head>
+
+<body>
+    <main class="auth">
+        <section class="hero">
+            <div class="hero-card">
+                <h1>Yosh mutaxassislar va tadbirkorlar bir joyda</h1>
+                <p>Mutaxassis o‘z yo‘nalishi bo‘yicha taklif yuboradi, tadbirkor esa takliflarni ko‘rib chiqib, qaysi
+                    biri bilan ishlashni hal qiladi.</p>
+            </div>
+        </section>
+
+        <section class="panel">
+            <div class="panel-inner">
+                <div class="segmented" role="group" aria-label="Kim sifatida kirasiz">
+                    <button type="button" data-role="mutaxassis" aria-pressed="true">Mutaxassis</button>
+                    <button type="button" data-role="tadbirkor" aria-pressed="false">Tadbirkor</button>
+                </div>
+
+                <form id="authForm" class="form" novalidate>
+                    <h2 id="formTitle">Kirish</h2>
+                    <div class="field" id="nameField" hidden>
+                        <label for="name" id="nameLabel">Ism va familiya</label>
+                        <input id="name" name="name" type="text" autocomplete="name">
+                        <small class="error" data-for="name"></small>
+                    </div>
+                    <div class="field">
+                        <label for="login" id="loginLabel">Telefon yoki email</label>
+                        <input id="login" name="login" type="text" autocomplete="username">
+                        <small class="error" data-for="login"></small>
+                    </div>
+                    <div class="field">
+                        <label for="pass">Parol</label>
+                        <input id="pass" name="pass" type="password" autocomplete="current-password">
+                        <small class="error" data-for="pass"></small>
+                    </div>
+                    <button type="submit" class="btn" id="submitBtn">Kirish</button>
+                    <p class="switch-line" id="switchLine">Akkauntingiz yo‘qmi? <button type="button"
+                            id="switchBtn">Ro‘yxatdan o‘ting</button></p>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="auth.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

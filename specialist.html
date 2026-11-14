@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Unbounded:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Mutaxassis kabineti</title>
+</head>
+
+<body>
+    <main class="page">
+        <div class="page-head">
+            <h1>Yangi taklif yuboring</h1>
+            <p>Yo‘nalishingizni tanlab, tadbirkorga g‘oya yoki hamkorlik taklifingizni yozing. Taklif holatini o‘ng
+                tomonda kuzatasiz.</p>
+        </div>
+        <div class="cols">
+            <form id="proposalForm" class="form sticky" novalidate>
+                <div class="field">
+                    <label for="to">Kimga yuboriladi</label>
+                    <select id="to" name="to"></select>
+                    <small class="error" data-for="to"></small>
+                </div>
+                <div class="row">
+                    <div class="field">
+                        <label for="direction">Yo‘nalish</label>
+                        <select id="direction" name="direction"></select>
+                        <small class="error" data-for="direction"></small>
+                    </div>
+                    <div class="field">
+                        <label for="level">Tajriba</label>
+                        <select id="level" name="level"></select>
+                        <small class="error" data-for="level"></small>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="title">Taklif sarlavhasi</label>
+                    <input id="title" name="title" type="text" maxlength="90">
+                    <small class="error" data-for="title"></small>
+                </div>
+                <div class="field">
+                    <label for="text">Taklif tavsifi</label>
+                    <textarea id="text" name="text" rows="5" maxlength="800"></textarea>
+                    <small class="hint"><span id="count">0</span> / 800</small>
+                    <small class="error" data-for="text"></small>
+                </div>
+                <div class="field">
+                    <label for="budget">Byudjet (so‘m)</label>
+                    <input id="budget" name="budget" type="text" inputmode="numeric" placeholder="masalan: 5 000 000">
+                    <small class="hint">Loyiha uchun so‘ragan summangiz</small>
+                    <small class="error" data-for="budget"></small>
+                </div>
+                <div class="field">
+                    <label for="contact">Telefon yoki Telegram</label>
+                    <input id="contact" name="contact" type="text" placeholder="+998 90 123 45 67 yoki @username">
+                    <small class="error" data-for="contact"></small>
+                </div>
+                <button type="submit" class="btn">Taklifni yuborish</button>
+                <p id="status" class="status" role="status" aria-live="polite"></p>
+            </form>
+
+            <section aria-labelledby="mineTitle">
+                <div class="section-title">
+                    <h2 id="mineTitle">Mening takliflarim</h2><span class="count" id="total">0</span>
+                </div>
+                <ul id="list" class="list"></ul>
+                <p id="empty" class="empty" hidden>Hali taklif yubormadingiz. Chap tomondagi forma orqali birinchi
+                    taklifni yuboring.</p>
+            </section>
+        </div>
+    </main>
+    <script src="auth.js"></script>
+    <script src="specialist.js"></script>
+</body>
+
+</html>
